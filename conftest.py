@@ -1,7 +1,7 @@
 import pytest
 import allure
 from selenium import webdriver
-import data
+from data import Urls
 from pages.main_page import MainPage
 from pages.order_page import OrderPage
 from pages.switch_page import SwitchPage
@@ -17,13 +17,13 @@ def driver():
 @pytest.fixture
 def main_page(driver):
     page = MainPage(driver)
-    page.get_url(data.MAIN_URL)
+    page.get_url(Urls.MAIN_URL)
     return page
 
 @pytest.fixture
 def order_page(driver):
     page = OrderPage(driver)
-    page.get_url(data.MAIN_URL)
+    page.get_url(Urls.MAIN_URL)
     return page
 
 @pytest.fixture

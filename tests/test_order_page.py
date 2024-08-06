@@ -4,7 +4,7 @@ from locators.main_page_locators import MainPageLocators
 
 
 class TestOrderPage:
-    @allure.step('Тестируем позитивный сценарий заказа самоката. Две даты.')
+    @allure.title('Тестируем позитивный сценарий заказа самоката. Две даты.')
     @pytest.mark.parametrize('button, date',
                              [
                                  [MainPageLocators.ORDER_BUTTON_HEADER, '10.08.2024'],
